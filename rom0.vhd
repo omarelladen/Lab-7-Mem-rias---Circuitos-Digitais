@@ -4,7 +4,7 @@
 -- MODULE: altsyncram 
 
 -- ============================================================
--- File Name: rom01_en.vhd
+-- File Name: rom0.vhd
 -- Megafunction Name(s):
 -- 			altsyncram
 --
@@ -39,19 +39,17 @@ USE ieee.std_logic_1164.all;
 LIBRARY altera_mf;
 USE altera_mf.altera_mf_components.all;
 
-ENTITY rom01_en IS
+ENTITY rom0 IS
 	PORT
 	(
 		address		: IN STD_LOGIC_VECTOR (7 DOWNTO 0);
-		clken		: IN STD_LOGIC  := '1';
 		clock		: IN STD_LOGIC  := '1';
-		rden		: IN STD_LOGIC  := '1';
 		q		: OUT STD_LOGIC_VECTOR (7 DOWNTO 0)
 	);
-END rom01_en;
+END rom0;
 
 
-ARCHITECTURE SYN OF rom01_en IS
+ARCHITECTURE SYN OF rom0 IS
 
 	SIGNAL sub_wire0	: STD_LOGIC_VECTOR (7 DOWNTO 0);
 
@@ -61,7 +59,7 @@ BEGIN
 	altsyncram_component : altsyncram
 	GENERIC MAP (
 		address_aclr_a => "NONE",
-		clock_enable_input_a => "NORMAL",
+		clock_enable_input_a => "BYPASS",
 		clock_enable_output_a => "BYPASS",
 		init_file => "ROM01_256_8.hex",
 		intended_device_family => "MAX 10",
@@ -78,8 +76,6 @@ BEGIN
 	PORT MAP (
 		address_a => address,
 		clock0 => clock,
-		clocken0 => clken,
-		rden_a => rden,
 		q_a => sub_wire0
 	);
 
@@ -97,9 +93,9 @@ END SYN;
 -- Retrieval info: PRIVATE: BYTE_ENABLE NUMERIC "0"
 -- Retrieval info: PRIVATE: BYTE_SIZE NUMERIC "8"
 -- Retrieval info: PRIVATE: BlankMemory NUMERIC "0"
--- Retrieval info: PRIVATE: CLOCK_ENABLE_INPUT_A NUMERIC "1"
+-- Retrieval info: PRIVATE: CLOCK_ENABLE_INPUT_A NUMERIC "0"
 -- Retrieval info: PRIVATE: CLOCK_ENABLE_OUTPUT_A NUMERIC "0"
--- Retrieval info: PRIVATE: Clken NUMERIC "1"
+-- Retrieval info: PRIVATE: Clken NUMERIC "0"
 -- Retrieval info: PRIVATE: IMPLEMENT_IN_LES NUMERIC "0"
 -- Retrieval info: PRIVATE: INIT_FILE_LAYOUT STRING "PORT_A"
 -- Retrieval info: PRIVATE: INIT_TO_SIM_X NUMERIC "0"
@@ -117,10 +113,10 @@ END SYN;
 -- Retrieval info: PRIVATE: UseDQRAM NUMERIC "0"
 -- Retrieval info: PRIVATE: WidthAddr NUMERIC "8"
 -- Retrieval info: PRIVATE: WidthData NUMERIC "8"
--- Retrieval info: PRIVATE: rden NUMERIC "1"
+-- Retrieval info: PRIVATE: rden NUMERIC "0"
 -- Retrieval info: LIBRARY: altera_mf altera_mf.altera_mf_components.all
 -- Retrieval info: CONSTANT: ADDRESS_ACLR_A STRING "NONE"
--- Retrieval info: CONSTANT: CLOCK_ENABLE_INPUT_A STRING "NORMAL"
+-- Retrieval info: CONSTANT: CLOCK_ENABLE_INPUT_A STRING "BYPASS"
 -- Retrieval info: CONSTANT: CLOCK_ENABLE_OUTPUT_A STRING "BYPASS"
 -- Retrieval info: CONSTANT: INIT_FILE STRING "ROM01_256_8.hex"
 -- Retrieval info: CONSTANT: INTENDED_DEVICE_FAMILY STRING "MAX 10"
@@ -134,18 +130,14 @@ END SYN;
 -- Retrieval info: CONSTANT: WIDTH_A NUMERIC "8"
 -- Retrieval info: CONSTANT: WIDTH_BYTEENA_A NUMERIC "1"
 -- Retrieval info: USED_PORT: address 0 0 8 0 INPUT NODEFVAL "address[7..0]"
--- Retrieval info: USED_PORT: clken 0 0 0 0 INPUT VCC "clken"
 -- Retrieval info: USED_PORT: clock 0 0 0 0 INPUT VCC "clock"
 -- Retrieval info: USED_PORT: q 0 0 8 0 OUTPUT NODEFVAL "q[7..0]"
--- Retrieval info: USED_PORT: rden 0 0 0 0 INPUT VCC "rden"
 -- Retrieval info: CONNECT: @address_a 0 0 8 0 address 0 0 8 0
 -- Retrieval info: CONNECT: @clock0 0 0 0 0 clock 0 0 0 0
--- Retrieval info: CONNECT: @clocken0 0 0 0 0 clken 0 0 0 0
--- Retrieval info: CONNECT: @rden_a 0 0 0 0 rden 0 0 0 0
 -- Retrieval info: CONNECT: q 0 0 8 0 @q_a 0 0 8 0
--- Retrieval info: GEN_FILE: TYPE_NORMAL rom01_en.vhd TRUE
--- Retrieval info: GEN_FILE: TYPE_NORMAL rom01_en.inc FALSE
--- Retrieval info: GEN_FILE: TYPE_NORMAL rom01_en.cmp TRUE
--- Retrieval info: GEN_FILE: TYPE_NORMAL rom01_en.bsf TRUE
--- Retrieval info: GEN_FILE: TYPE_NORMAL rom01_en_inst.vhd FALSE
+-- Retrieval info: GEN_FILE: TYPE_NORMAL rom0.vhd TRUE
+-- Retrieval info: GEN_FILE: TYPE_NORMAL rom0.inc FALSE
+-- Retrieval info: GEN_FILE: TYPE_NORMAL rom0.cmp TRUE
+-- Retrieval info: GEN_FILE: TYPE_NORMAL rom0.bsf TRUE
+-- Retrieval info: GEN_FILE: TYPE_NORMAL rom0_inst.vhd FALSE
 -- Retrieval info: LIB_FILE: altera_mf

@@ -4,7 +4,7 @@
 -- MODULE: altsyncram 
 
 -- ============================================================
--- File Name: rom01_en.vhd
+-- File Name: rom_down_en.vhd
 -- Megafunction Name(s):
 -- 			altsyncram
 --
@@ -39,7 +39,7 @@ USE ieee.std_logic_1164.all;
 LIBRARY altera_mf;
 USE altera_mf.altera_mf_components.all;
 
-ENTITY rom01_en IS
+ENTITY rom_down_en IS
 	PORT
 	(
 		address		: IN STD_LOGIC_VECTOR (7 DOWNTO 0);
@@ -48,10 +48,10 @@ ENTITY rom01_en IS
 		rden		: IN STD_LOGIC  := '1';
 		q		: OUT STD_LOGIC_VECTOR (7 DOWNTO 0)
 	);
-END rom01_en;
+END rom_down_en;
 
 
-ARCHITECTURE SYN OF rom01_en IS
+ARCHITECTURE SYN OF rom_down_en IS
 
 	SIGNAL sub_wire0	: STD_LOGIC_VECTOR (7 DOWNTO 0);
 
@@ -63,7 +63,7 @@ BEGIN
 		address_aclr_a => "NONE",
 		clock_enable_input_a => "NORMAL",
 		clock_enable_output_a => "BYPASS",
-		init_file => "ROM01_256_8.hex",
+		init_file => "ROM_256_8_Down.hex",
 		intended_device_family => "MAX 10",
 		lpm_hint => "ENABLE_RUNTIME_MOD=NO",
 		lpm_type => "altsyncram",
@@ -107,7 +107,7 @@ END SYN;
 -- Retrieval info: PRIVATE: JTAG_ENABLED NUMERIC "0"
 -- Retrieval info: PRIVATE: JTAG_ID STRING "NONE"
 -- Retrieval info: PRIVATE: MAXIMUM_DEPTH NUMERIC "0"
--- Retrieval info: PRIVATE: MIFfilename STRING "ROM01_256_8.hex"
+-- Retrieval info: PRIVATE: MIFfilename STRING "ROM_256_8_Down.hex"
 -- Retrieval info: PRIVATE: NUMWORDS_A NUMERIC "256"
 -- Retrieval info: PRIVATE: RAM_BLOCK_TYPE NUMERIC "0"
 -- Retrieval info: PRIVATE: RegAddr NUMERIC "1"
@@ -122,7 +122,7 @@ END SYN;
 -- Retrieval info: CONSTANT: ADDRESS_ACLR_A STRING "NONE"
 -- Retrieval info: CONSTANT: CLOCK_ENABLE_INPUT_A STRING "NORMAL"
 -- Retrieval info: CONSTANT: CLOCK_ENABLE_OUTPUT_A STRING "BYPASS"
--- Retrieval info: CONSTANT: INIT_FILE STRING "ROM01_256_8.hex"
+-- Retrieval info: CONSTANT: INIT_FILE STRING "ROM_256_8_Down.hex"
 -- Retrieval info: CONSTANT: INTENDED_DEVICE_FAMILY STRING "MAX 10"
 -- Retrieval info: CONSTANT: LPM_HINT STRING "ENABLE_RUNTIME_MOD=NO"
 -- Retrieval info: CONSTANT: LPM_TYPE STRING "altsyncram"
@@ -143,9 +143,9 @@ END SYN;
 -- Retrieval info: CONNECT: @clocken0 0 0 0 0 clken 0 0 0 0
 -- Retrieval info: CONNECT: @rden_a 0 0 0 0 rden 0 0 0 0
 -- Retrieval info: CONNECT: q 0 0 8 0 @q_a 0 0 8 0
--- Retrieval info: GEN_FILE: TYPE_NORMAL rom01_en.vhd TRUE
--- Retrieval info: GEN_FILE: TYPE_NORMAL rom01_en.inc FALSE
--- Retrieval info: GEN_FILE: TYPE_NORMAL rom01_en.cmp TRUE
--- Retrieval info: GEN_FILE: TYPE_NORMAL rom01_en.bsf TRUE
--- Retrieval info: GEN_FILE: TYPE_NORMAL rom01_en_inst.vhd FALSE
+-- Retrieval info: GEN_FILE: TYPE_NORMAL rom_down_en.vhd TRUE
+-- Retrieval info: GEN_FILE: TYPE_NORMAL rom_down_en.inc FALSE
+-- Retrieval info: GEN_FILE: TYPE_NORMAL rom_down_en.cmp TRUE
+-- Retrieval info: GEN_FILE: TYPE_NORMAL rom_down_en.bsf TRUE
+-- Retrieval info: GEN_FILE: TYPE_NORMAL rom_down_en_inst.vhd FALSE
 -- Retrieval info: LIB_FILE: altera_mf

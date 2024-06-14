@@ -1,0 +1,38 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+
+entity ResetControl is
+    Port (
+        sinal_load : in  STD_LOGIC;
+        clk_zerar  : in  STD_LOGIC;
+        saida      : out STD_LOGIC
+    );
+end ResetControl;
+
+architecture Behavioral of ResetControl is
+    signal saida_reg   : STD_LOGIC;
+    signal prev_sinal_load : STD_LOGIC := '0';
+    signal prev_clk_zerar  : STD_LOGIC := '0';
+    
+begin
+
+    process(sinal_load, clk_zerar)
+    begin
+        -- Detectando borda de subida do sinal_load
+        if (sinal_load = '1' and prev_sinal_load = '0') then
+            saida_reg <= '1';
+        end if;
+
+        -- Detectando borda de subida do clk_zerar
+        if (clk_zerar = '1' and prev_clk_zerar = '0') then
+            saida_reg <= '0';
+        end if;
+        
+        -- Atualizando os sinais prévios
+        prev_sinal_load <= sinal_load;
+        prev_clk_zerar  <= clk_zerar;
+    end process;
+
+    saida <= saida_reg;
+
+end Behavioral;

@@ -55,7 +55,7 @@ refer to the applicable agreement for further details.
 	(input)
 	(rect 632 288 800 304)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
-	(text "pi[7..0]" (rect 5 0 40 12)(font "Arial" ))
+	(text "pi[7..0]" (rect 5 0 39 12)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -2170,46 +2170,6 @@ refer to the applicable agreement for further details.
 	(bus)
 )
 (connector
-	(text "pi[0]" (rect 1139 208 1160 225)(font "Intel Clear" ))
-	(pt 1112 224)
-	(pt 2096 224)
-)
-(connector
-	(text "pi[1]" (rect 1135 240 1156 257)(font "Intel Clear" ))
-	(pt 1112 256)
-	(pt 1976 256)
-)
-(connector
-	(text "pi[2]" (rect 1149 272 1170 289)(font "Intel Clear" ))
-	(pt 1112 288)
-	(pt 1840 288)
-)
-(connector
-	(text "pi[3]" (rect 1172 304 1193 321)(font "Intel Clear" ))
-	(pt 1112 320)
-	(pt 1712 320)
-)
-(connector
-	(text "pi[4]" (rect 1144 336 1165 353)(font "Intel Clear" ))
-	(pt 1112 352)
-	(pt 1584 352)
-)
-(connector
-	(text "pi[5]" (rect 1151 368 1172 385)(font "Intel Clear" ))
-	(pt 1112 384)
-	(pt 1456 384)
-)
-(connector
-	(text "pi[6]" (rect 1137 392 1158 409)(font "Intel Clear" ))
-	(pt 1112 408)
-	(pt 1328 408)
-)
-(connector
-	(text "pi[7]" (rect 1132 424 1153 441)(font "Intel Clear" ))
-	(pt 1112 440)
-	(pt 1128 440)
-)
-(connector
 	(pt 2288 912)
 	(pt 2288 936)
 	(bus)
@@ -2302,6 +2262,46 @@ refer to the applicable agreement for further details.
 	(pt 2288 1008)
 	(bus)
 )
+(connector
+	(text "pi[7]" (rect 1139 208 1160 225)(font "Intel Clear" ))
+	(pt 1112 224)
+	(pt 2096 224)
+)
+(connector
+	(text "pi[6]" (rect 1135 240 1156 257)(font "Intel Clear" ))
+	(pt 1112 256)
+	(pt 1976 256)
+)
+(connector
+	(text "pi[5]" (rect 1149 272 1170 289)(font "Intel Clear" ))
+	(pt 1112 288)
+	(pt 1840 288)
+)
+(connector
+	(text "pi[4]" (rect 1172 304 1193 321)(font "Intel Clear" ))
+	(pt 1112 320)
+	(pt 1712 320)
+)
+(connector
+	(text "pi[3]" (rect 1144 336 1165 353)(font "Intel Clear" ))
+	(pt 1112 352)
+	(pt 1584 352)
+)
+(connector
+	(text "pi[2]" (rect 1151 368 1172 385)(font "Intel Clear" ))
+	(pt 1112 384)
+	(pt 1456 384)
+)
+(connector
+	(text "pi[1]" (rect 1137 392 1158 409)(font "Intel Clear" ))
+	(pt 1112 408)
+	(pt 1328 408)
+)
+(connector
+	(text "pi[0]" (rect 1132 424 1153 441)(font "Intel Clear" ))
+	(pt 1112 440)
+	(pt 1128 440)
+)
 (junction (pt 1704 816))
 (junction (pt 1576 816))
 (junction (pt 1832 816))
@@ -2360,5 +2360,6 @@ refer to the applicable agreement for further details.
 (junction (pt 2288 1032))
 (junction (pt 2288 1056))
 (text "1 no modo LOAD" (rect 1192 496 1293 515)(font "Intel Clear" (font_size 8)))
-(text "LSB" (rect 1136 192 1159 211)(font "Intel Clear" (font_size 8)))
-(text "MSB" (rect 1168 432 1195 451)(font "Intel Clear" (font_size 8)))
+(text "LSB" (rect 1152 432 1175 451)(font "Intel Clear" (font_size 8)))
+(text "MSB" (rect 1136 192 1163 211)(font "Intel Clear" (font_size 8)))
+(text "Maquina funciona olhando primeiro o MSB" (rect 1216 184 1466 203)(font "Intel Clear" (font_size 8)))

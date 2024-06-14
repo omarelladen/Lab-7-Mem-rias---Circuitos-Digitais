@@ -19,7 +19,7 @@ process(clk)
 	begin
 	if(clk'event and clk='1') then
 		count <=count+1;
-		if (count = 50000000/(2*3125000)) then -- (3.125 MHz)
+		if (count = 50000000/(2*3125000)) then -- (3.125 MHz) ( /(2*3125000) )
 			tmp <= NOT tmp;
 			count <= 1;
 		end if;

@@ -37,7 +37,7 @@ refer to the applicable agreement for further details.
 )
 (pin
 	(input)
-	(rect -280 288 -112 304)
+	(rect -24 288 144 304)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
 	(text "rst" (rect 5 0 17 12)(font "Arial" ))
 	(pt 168 8)
@@ -620,6 +620,22 @@ refer to the applicable agreement for further details.
 		(line (pt 78 12)(pt 82 8))
 	)
 )
+(pin
+	(output)
+	(rect 2616 408 2792 424)
+	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
+	(text "reset_com0" (rect 90 0 147 12)(font "Arial" ))
+	(pt 0 8)
+	(drawing
+		(line (pt 0 8)(pt 52 8))
+		(line (pt 52 4)(pt 78 4))
+		(line (pt 52 12)(pt 78 12))
+		(line (pt 52 12)(pt 52 4))
+		(line (pt 78 4)(pt 82 8))
+		(line (pt 82 8)(pt 78 12))
+		(line (pt 78 12)(pt 82 8))
+	)
+)
 (symbol
 	(rect 248 144 280 160)
 	(text "VCC" (rect 7 0 27 10)(font "Arial" (font_size 6)))
@@ -777,42 +793,6 @@ refer to the applicable agreement for further details.
 		(line (pt 0 0)(pt 0 0))
 		(line (pt 0 0)(pt 0 0))
 		(line (pt 0 0)(pt 0 0))
-	)
-)
-(symbol
-	(rect 360 -232 520 -120)
-	(text "up_ctr_mod256_2" (rect 5 0 92 12)(font "Arial" ))
-	(text "inst4" (rect 8 96 30 113)(font "Intel Clear" ))
-	(port
-		(pt 0 32)
-		(input)
-		(text "enable" (rect 0 0 31 12)(font "Arial" ))
-		(text "enable" (rect 21 27 52 39)(font "Arial" ))
-		(line (pt 0 32)(pt 16 32))
-	)
-	(port
-		(pt 0 48)
-		(input)
-		(text "clk" (rect 0 0 14 12)(font "Arial" ))
-		(text "clk" (rect 21 43 35 55)(font "Arial" ))
-		(line (pt 0 48)(pt 16 48))
-	)
-	(port
-		(pt 0 64)
-		(input)
-		(text "reset" (rect 0 0 24 12)(font "Arial" ))
-		(text "reset" (rect 21 59 45 71)(font "Arial" ))
-		(line (pt 0 64)(pt 16 64))
-	)
-	(port
-		(pt 160 32)
-		(output)
-		(text "cout[7..0]" (rect 0 0 47 12)(font "Arial" ))
-		(text "cout[7..0]" (rect 100 27 147 39)(font "Arial" ))
-		(line (pt 160 32)(pt 144 32)(line_width 3))
-	)
-	(drawing
-		(rectangle (rect 16 16 144 96))
 	)
 )
 (symbol
@@ -1427,7 +1407,7 @@ refer to the applicable agreement for further details.
 	)
 )
 (symbol
-	(rect 1576 400 1712 480)
+	(rect 1584 392 1720 472)
 	(text "Controle_Load" (rect 5 0 75 12)(font "Arial" ))
 	(text "inst21" (rect 8 64 36 81)(font "Intel Clear" ))
 	(port
@@ -1542,21 +1522,6 @@ refer to the applicable agreement for further details.
 	)
 )
 (symbol
-	(rect 2600 184 2632 200)
-	(text "VCC" (rect 7 0 27 10)(font "Arial" (font_size 6)))
-	(text "inst18" (rect 3 5 31 22)(font "Intel Clear" )(invisible))
-	(port
-		(pt 16 16)
-		(output)
-		(text "1" (rect 19 7 24 19)(font "Courier New" (bold))(invisible))
-		(text "1" (rect 19 7 24 19)(font "Courier New" (bold))(invisible))
-		(line (pt 16 16)(pt 16 8))
-	)
-	(drawing
-		(line (pt 8 8)(pt 24 8))
-	)
-)
-(symbol
 	(rect 2664 184 2848 312)
 	(text "detector" (rect 5 0 54 19)(font "Intel Clear" (font_size 8)))
 	(text "inst23" (rect 8 107 36 124)(font "Intel Clear" ))
@@ -1618,6 +1583,103 @@ refer to the applicable agreement for further details.
 	)
 	(drawing
 		(rectangle (rect 16 16 168 112))
+	)
+)
+(symbol
+	(rect 1472 416 1520 448)
+	(text "NOT" (rect 1 0 21 10)(font "Arial" (font_size 6)))
+	(text "hetsfd" (rect 3 21 32 38)(font "Intel Clear" ))
+	(port
+		(pt 0 16)
+		(input)
+		(text "IN" (rect 2 7 13 19)(font "Courier New" (bold))(invisible))
+		(text "IN" (rect 2 7 13 19)(font "Courier New" (bold))(invisible))
+		(line (pt 0 16)(pt 13 16))
+	)
+	(port
+		(pt 48 16)
+		(output)
+		(text "OUT" (rect 32 7 49 19)(font "Courier New" (bold))(invisible))
+		(text "OUT" (rect 32 7 49 19)(font "Courier New" (bold))(invisible))
+		(line (pt 39 16)(pt 48 16))
+	)
+	(drawing
+		(line (pt 13 25)(pt 13 7))
+		(line (pt 13 7)(pt 31 16))
+		(line (pt 13 25)(pt 31 16))
+		(circle (rect 31 12 39 20))
+	)
+)
+(symbol
+	(rect 2568 232 2616 264)
+	(text "NOT" (rect 1 0 21 10)(font "Arial" (font_size 6)))
+	(text "cxskia" (rect 3 21 31 38)(font "Intel Clear" ))
+	(port
+		(pt 0 16)
+		(input)
+		(text "IN" (rect 2 7 13 19)(font "Courier New" (bold))(invisible))
+		(text "IN" (rect 2 7 13 19)(font "Courier New" (bold))(invisible))
+		(line (pt 0 16)(pt 13 16))
+	)
+	(port
+		(pt 48 16)
+		(output)
+		(text "OUT" (rect 32 7 49 19)(font "Courier New" (bold))(invisible))
+		(text "OUT" (rect 32 7 49 19)(font "Courier New" (bold))(invisible))
+		(line (pt 39 16)(pt 48 16))
+	)
+	(drawing
+		(line (pt 13 25)(pt 13 7))
+		(line (pt 13 7)(pt 31 16))
+		(line (pt 13 25)(pt 31 16))
+		(circle (rect 31 12 39 20))
+	)
+)
+(symbol
+	(rect 2408 320 2456 352)
+	(text "NOT" (rect 1 0 21 10)(font "Arial" (font_size 6)))
+	(text "rwbdf" (rect 3 21 30 38)(font "Intel Clear" ))
+	(port
+		(pt 0 16)
+		(input)
+		(text "IN" (rect 2 7 13 19)(font "Courier New" (bold))(invisible))
+		(text "IN" (rect 2 7 13 19)(font "Courier New" (bold))(invisible))
+		(line (pt 0 16)(pt 13 16))
+	)
+	(port
+		(pt 48 16)
+		(output)
+		(text "OUT" (rect 32 7 49 19)(font "Courier New" (bold))(invisible))
+		(text "OUT" (rect 32 7 49 19)(font "Courier New" (bold))(invisible))
+		(line (pt 39 16)(pt 48 16))
+	)
+	(drawing
+		(line (pt 13 25)(pt 13 7))
+		(line (pt 13 7)(pt 31 16))
+		(line (pt 13 25)(pt 31 16))
+		(circle (rect 31 12 39 20))
+	)
+)
+(symbol
+	(rect 2248 288 2376 368)
+	(text "ResetControl" (rect 5 0 69 12)(font "Arial" ))
+	(text "rststs" (rect 8 64 32 81)(font "Intel Clear" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "clk" (rect 0 0 14 12)(font "Arial" ))
+		(text "clk" (rect 21 27 35 39)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32))
+	)
+	(port
+		(pt 128 32)
+		(output)
+		(text "load" (rect 0 0 20 12)(font "Arial" ))
+		(text "load" (rect 91 27 111 39)(font "Arial" ))
+		(line (pt 128 32)(pt 112 32))
+	)
+	(drawing
+		(rectangle (rect 16 16 112 64))
 	)
 )
 (connector
@@ -1868,18 +1930,6 @@ refer to the applicable agreement for further details.
 	(pt 2272 -56)
 )
 (connector
-	(pt 1576 432)
-	(pt 1520 432)
-)
-(connector
-	(pt 1520 432)
-	(pt 1520 528)
-)
-(connector
-	(pt 1576 448)
-	(pt 1552 448)
-)
-(connector
 	(pt 2352 232)
 	(pt 2352 144)
 )
@@ -1972,40 +2022,8 @@ refer to the applicable agreement for further details.
 	(pt 1792 248)
 )
 (connector
-	(pt 1792 432)
-	(pt 1792 248)
-)
-(connector
 	(pt 1776 432)
 	(pt 1792 432)
-)
-(connector
-	(pt 1968 432)
-	(pt 1872 432)
-)
-(connector
-	(pt 1872 464)
-	(pt 1872 432)
-)
-(connector
-	(pt 1720 464)
-	(pt 1872 464)
-)
-(connector
-	(pt 1720 464)
-	(pt 1720 432)
-)
-(connector
-	(pt 1712 432)
-	(pt 1720 432)
-)
-(connector
-	(pt 1720 432)
-	(pt 1728 432)
-)
-(connector
-	(pt 1552 472)
-	(pt 1552 448)
 )
 (connector
 	(pt 672 -368)
@@ -2171,14 +2189,6 @@ refer to the applicable agreement for further details.
 	(bus)
 )
 (connector
-	(pt 264 192)
-	(pt 264 296)
-)
-(connector
-	(pt -112 296)
-	(pt 264 296)
-)
-(connector
 	(pt 72 528)
 	(pt -48 528)
 )
@@ -2189,10 +2199,6 @@ refer to the applicable agreement for further details.
 (connector
 	(pt 16 184)
 	(pt -48 184)
-)
-(connector
-	(pt -48 184)
-	(pt -264 184)
 )
 (connector
 	(pt 200 80)
@@ -2219,10 +2225,6 @@ refer to the applicable agreement for further details.
 	(pt 240 528)
 )
 (connector
-	(pt 240 528)
-	(pt 1520 528)
-)
-(connector
 	(pt 424 328)
 	(pt 816 328)
 )
@@ -2241,30 +2243,6 @@ refer to the applicable agreement for further details.
 (connector
 	(pt 232 184)
 	(pt 232 328)
-)
-(connector
-	(pt 2512 528)
-	(pt 1952 528)
-)
-(connector
-	(pt 1952 560)
-	(pt 1952 528)
-)
-(connector
-	(pt 1912 560)
-	(pt 1912 528)
-)
-(connector
-	(pt 1952 560)
-	(pt 1912 560)
-)
-(connector
-	(pt 1520 528)
-	(pt 1832 528)
-)
-(connector
-	(pt 1832 528)
-	(pt 1912 528)
 )
 (connector
 	(pt 2856 280)
@@ -2299,24 +2277,160 @@ refer to the applicable agreement for further details.
 	(pt 2512 248)
 )
 (connector
-	(pt 2616 200)
-	(pt 2616 216)
-)
-(connector
 	(pt 2056 232)
 	(pt 2352 232)
-)
-(connector
-	(pt 2616 216)
-	(pt 2664 216)
 )
 (connector
 	(pt 2352 232)
 	(pt 2664 232)
 )
 (connector
+	(pt 1416 528)
+	(pt 1416 432)
+)
+(connector
+	(pt 1416 432)
+	(pt 1472 432)
+)
+(connector
+	(pt 240 528)
+	(pt 1416 528)
+)
+(connector
+	(pt 1416 528)
+	(pt 1832 528)
+)
+(connector
 	(pt 2512 248)
+	(pt 2568 248)
+)
+(connector
+	(pt 2624 216)
+	(pt 2624 200)
+)
+(connector
+	(pt 2464 216)
+	(pt 2624 216)
+)
+(connector
+	(pt 2624 216)
+	(pt 2664 216)
+)
+(connector
+	(pt 1872 464)
+	(pt 1728 464)
+)
+(connector
+	(pt 1728 432)
+	(pt 1728 464)
+)
+(connector
+	(pt 1872 432)
+	(pt 1968 432)
+)
+(connector
+	(pt 1792 248)
+	(pt 1792 432)
+)
+(connector
+	(pt 2616 248)
 	(pt 2664 248)
+)
+(connector
+	(pt 1872 432)
+	(pt 1872 464)
+)
+(connector
+	(pt 1552 440)
+	(pt 1584 440)
+)
+(connector
+	(pt 1552 472)
+	(pt 1552 440)
+)
+(connector
+	(pt 1528 432)
+	(pt 1528 424)
+)
+(connector
+	(pt 1520 432)
+	(pt 1528 432)
+)
+(connector
+	(pt 1720 432)
+	(pt 1720 424)
+)
+(connector
+	(pt 1728 432)
+	(pt 1720 432)
+)
+(connector
+	(pt 1528 424)
+	(pt 1584 424)
+)
+(connector
+	(pt -232 704)
+	(pt 2152 704)
+)
+(connector
+	(pt -232 704)
+	(pt -232 184)
+)
+(connector
+	(pt -264 184)
+	(pt -232 184)
+)
+(connector
+	(pt -232 184)
+	(pt -48 184)
+)
+(connector
+	(pt 2152 704)
+	(pt 2152 320)
+)
+(connector
+	(pt 2152 320)
+	(pt 2248 320)
+)
+(connector
+	(pt 2464 336)
+	(pt 2456 336)
+)
+(connector
+	(pt 2464 216)
+	(pt 2464 336)
+)
+(connector
+	(pt 2400 336)
+	(pt 2408 336)
+)
+(connector
+	(pt 2616 416)
+	(pt 2400 416)
+)
+(connector
+	(pt 2400 320)
+	(pt 2400 336)
+)
+(connector
+	(pt 2400 336)
+	(pt 2400 416)
+)
+(connector
+	(pt 2376 320)
+	(pt 2400 320)
+)
+(connector
+	(pt 264 192)
+	(pt 264 296)
+)
+(connector
+	(pt 144 296)
+	(pt 264 296)
+)
+(connector
+	(pt 1832 528)
+	(pt 2512 528)
 )
 (junction (pt 816 328))
 (junction (pt 720 264))
@@ -2341,9 +2455,7 @@ refer to the applicable agreement for further details.
 (junction (pt 2208 16))
 (junction (pt 2208 40))
 (junction (pt 2208 -56))
-(junction (pt 1520 528))
 (junction (pt 2352 232))
-(junction (pt 1720 432))
 (junction (pt 672 -280))
 (junction (pt 672 -192))
 (junction (pt 656 -120))
@@ -2362,6 +2474,11 @@ refer to the applicable agreement for further details.
 (junction (pt 240 528))
 (junction (pt 232 184))
 (junction (pt 1832 528))
+(junction (pt 1416 528))
+(junction (pt 2624 216))
+(junction (pt 1728 432))
+(junction (pt -232 184))
+(junction (pt 2400 336))
 (text "[7-4]" (rect 592 -320 622 -301)(font "Intel Clear" (font_size 8)))
 (text "[0-3]" (rect 592 -624 622 -605)(font "Intel Clear" (font_size 8)))
 (text "display 4" (rect 880 -248 935 -229)(font "Intel Clear" (font_size 8)))
@@ -2370,3 +2487,5 @@ refer to the applicable agreement for further details.
 (text "0-255" (rect 1136 232 1173 251)(font "Intel Clear" (font_size 8)))
 (text "9 reg aqui pra sincronizar com o reg do end" (rect 1040 -216 1296 -197)(font "Intel Clear" (font_size 8)))
 (text "256-511" (rect 1128 288 1182 307)(font "Intel Clear" (font_size 8)))
+(text "desloca p melhorar a pos do load" (rect 1408 392 1605 411)(font "Intel Clear" (font_size 8)))
+(text "freq16" (rect 2296 384 2337 403)(font "Intel Clear" (font_size 8)))
